@@ -1,0 +1,28 @@
+version: "3"
+
+volumes:
+  postgres_data: {}
+
+services:
+  dk_postgres_go:
+    container_name: dk_postgres_go
+    image: postgres:13.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASS}
+      - POSTGRES_DB=${DB_NAME}
+    logging:
+      options:
+        max-size: 10m
+        max-file: "3"
+    ports:
+      - "${DB_PORT}:5432"
+    networks:
+      - dk-app-go
+    volumes:
+      - ./docker/postgres_data:/var/lib/postgresql/data
+      # copy the sql script to create tables
+      #- ./sql/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+networks:
+  dk-app-go:
