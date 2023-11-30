@@ -1,7 +1,7 @@
 .PHONY : run format clean install build
 
 run:
-	go run ./internal/main.go
+	go run ./cmd/main.go
 
 watch:
 	air -c .air.toml
@@ -16,7 +16,7 @@ install:
 	go mod download
 
 build:
-	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -tags musl -o bin/main ./internal/main.go
+	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -tags musl -o bin/main ./cmd/main.go
 
 start:
 	./bin/main

@@ -4,10 +4,15 @@
 
 A great starting point for building RESTful APIs in Go using Echo framework, connecting to a PostgreSQL database.
 
+<div style="display: flex; justify-content: center;">
+    <a href="https://www.buymeacoffee.com/dika" target="_blank">
+        <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 46px !important;width: 179px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;">
+    </a>
+</div>
+
 ### Getting Started
 #### Prerequisites
 - Go 1.20 or higher
-
 
 ### TODO:
 - [x] Using air for hot reload
@@ -21,9 +26,10 @@ A great starting point for building RESTful APIs in Go using Echo framework, con
 - [ ] Migration mechanism
 - [ ] Datadog
 - [ ] Cron
-- [ ] Sending email
+- [ ] Notification (email, telegram, slack)
 - [ ] Rate limiter
 - [ ] Authentication (Basic auth, api key, JWT)
 - [ ] Swagger for Generating Rest Docs and Swagger panel
+- [ ] Auto changelog
 - [ ] Unit tests
 - [ ] Add more features
